@@ -12,7 +12,8 @@ const LoadPage = () => {
             console.log('Error loading page:', request.status);
         }
     };
-    request.open('GET', window.location.hash.substring(1) + '.html', true);
+    var pathName = "/public/" + window.location.hash.substring(1) + '.html';
+    request.open('GET', pathName, true);
     request.send();
 
 }
